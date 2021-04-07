@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: accounts
+# Table name: profiles
 #
 #  id         :bigint           not null, primary key
 #  account    :string
@@ -12,6 +12,6 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-class Account < ApplicationRecord
+class Profile < ApplicationRecord
     belongs_to :user
 end
