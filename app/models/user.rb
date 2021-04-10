@@ -26,4 +26,6 @@ class User < ApplicationRecord
   #userモデルを通じて、profileの属性の値をDBに保存する
   accepts_nested_attributes_for :profile
 
+  #articleとの関係
+  has_many :articles, dependent: :destroy
 end
