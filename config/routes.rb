@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resource :profile, only: [:show, :edit, :update, :create]
+  
+  resources :articles
 end
