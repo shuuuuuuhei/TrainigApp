@@ -23,6 +23,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one :profile, dependent: :destroy
-  accepts_nested_attributes_for :profile #userモデルを通じて、profileの属性の値をDBに保存する
-  
+  #userモデルを通じて、profileの属性の値をDBに保存する
+  accepts_nested_attributes_for :profile
+
 end
