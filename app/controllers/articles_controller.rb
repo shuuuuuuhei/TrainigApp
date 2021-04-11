@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
     end
 
     def edit
-
+        @article = Article.find(params[:id])
     end
 
     #DBを操作
@@ -26,7 +26,13 @@ class ArticlesController < ApplicationController
     end
 
     def update
-
+        @article = Article.find(params[:id])
+        if @article.update(article_params)
+            redirect_to articles_path, notice: '更新できました'
+        else
+            flash.now[:error] = '保存できませんでした'
+            render :new
+        end
     end
 
     def destroy

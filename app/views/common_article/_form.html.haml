@@ -1,0 +1,23 @@
+%ul
+    - @article.errors.full_messages.each do |message|
+        %li= message
+= form_with(model: @article, local: true, class: 'form') do |f|
+    .user_info
+        = image_tag 'default-avatar.jpeg', class: 'icon'
+        %h3.card_user_detail_name.user_info_name admin
+    %div.form-group
+        = f.label :title
+    %div
+        = f.text_field :title, placeholder: 'タイトルを入力', class: 'form-control'
+    %div
+        = f.label :content
+    %div
+        = f.text_area :content, placeholder: "つぶやきを入力", class: 'form-control'
+    %div.item-num-0#image-box__container
+        = f.file_field :images, direct_upload: true, multiple: true, id: 'img-file', style: "display:none"
+        %label{for: "img-file"}
+            %p.label-post-album + Album
+    %div
+        = f.label :location
+    %div
+        = f.submit 'POST' , class: 'btn btn-primary'
