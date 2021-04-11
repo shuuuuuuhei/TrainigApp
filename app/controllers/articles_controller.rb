@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
     before_action :authenticate_user!
 
 
-    #view
+    #記事を表示
     def index
         @articles = current_user.articles.all
     end
@@ -12,6 +12,10 @@ class ArticlesController < ApplicationController
     end
 
     def edit
+        @article = Article.find(params[:id])
+    end
+
+    def show
         @article = Article.find(params[:id])
     end
 
