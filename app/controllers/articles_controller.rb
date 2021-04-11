@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
     #DBを操作
     def create
         @article = current_user.articles.build(article_params)
-        if article.save
+        if @article.save
             redirect_to root_path, notice: '保存できたよ！'
         else
             flash.now[:error] = '保存に失敗しました'
