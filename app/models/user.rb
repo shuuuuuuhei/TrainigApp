@@ -28,4 +28,8 @@ class User < ApplicationRecord
 
   #articleとの関係
   has_many :articles, dependent: :destroy
+
+  def display_name
+    profile&.name || self.email.split('@').first
+  end
 end

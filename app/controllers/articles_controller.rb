@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
 
     #view
     def index
-        @user = current_user
+        @articles = current_user.articles.all
     end
 
     def new
@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
     end
 
     def delete
-
+        
     end
 
     #strong parameter

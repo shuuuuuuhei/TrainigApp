@@ -1,0 +1,51 @@
+.card {
+    margin: 20px 0;
+    padding: 30px 10px;
+    &_top {
+        display: flex;
+        align-items: center;
+        &_user{
+            margin-right: auto;
+        }
+        &_detail {
+        }
+    }
+}
+
+.dropbtn {
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: flex;
+  }
+  
+  .dropdown-content {
+    position: absolute;
+    font-weight: normal;
+    display: none;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 10px;
+    left: -100%;
+    transition: left 0.7s;
+    padding: 10px 10px;
+    &.mini {
+        min-width: 100px;
+    }
+  }
+  
+  .dropdown-content a {
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: white;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
