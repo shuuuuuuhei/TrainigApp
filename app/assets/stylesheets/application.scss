@@ -1,0 +1,64 @@
+@import "bootstrap"; 
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import 'card';
+html {
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+  
+body {
+    height: 100%;
+    font-size: 1em;
+    background-color: #fff;
+}
+
+.container {
+    padding: 16px 16px;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+h1,h2,h3 {
+}
+p {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    align-items: center;
+    color: #333333;
+}
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}

@@ -1,0 +1,22 @@
+%ul
+    - @article.errors.full_messages.each do |message|
+        %li= message
+= form_with(model: @article, local: true, class: 'form') do |f|
+    .user_info
+        = image_tag 'default-avatar.jpeg', class: 'icon'
+        %h3.card_user_detail_name.user_info_name admin
+    %div.form-group
+        = f.label :title
+    %div
+        = f.text_field :title, placeholder: 'タイトルを入力', class: 'form-control'
+    %div
+        = f.label :content
+    %div
+        = f.text_area :content, placeholder: "つぶやきを入力", class: 'form-control'
+    %div.item-num-0#image-box__container
+        = f.file_field :images, class: 'img_field', style: 'display:none;'
+        -# = attachment_image_tag @article, images: [], fallback: 'no-image.png', onClick: "$('.img_field').click()", class:'center-block img-thumbnail img-responsive img_prev'
+    %div
+        = f.label :location
+    %div
+        = f.submit 'POST' , class: 'btn btn-primary'

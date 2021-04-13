@@ -1,3 +1,5 @@
 %p Home
 - if user_signed_in?
     = link_to 'ログアウト', destroy_user_session_path, method: :delete
+    = link_to '記事投稿', new_article_path
+    = link_to '記事一覧', articles_path
