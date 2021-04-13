@@ -1,0 +1,2 @@
+class WorkOutReport < ApplicationRecord
+end
