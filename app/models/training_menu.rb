@@ -9,5 +9,6 @@
 #  updated_at  :datetime         not null
 #
 class TrainingMenu < ApplicationRecord
-    has_many :muscles, dependent: :destroy
+    has_many :muscles, through: :trainingmenu_muscles
+    has_many :trainingmenu_muscles
 end

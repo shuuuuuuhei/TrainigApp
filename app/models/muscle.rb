@@ -9,6 +9,7 @@
 #  updated_at  :datetime         not null
 #
 class Muscle < ApplicationRecord
-    belongs_to :training_menu
+    has_many :training_menu, through: :trainingmenu_muscles
+    has_many :trainingmenu_muscles
     validates :name, uniqueness: true
 end
