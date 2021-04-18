@@ -19,6 +19,7 @@
 #  fk_rails_...  (training_menu_id => training_menus.id)
 #
 class TrainingmenuMuscle < ApplicationRecord
-    belongs_to :training_menus
-    belongs_to :muscles
+    belongs_to :training_menu
+    belongs_to :muscle
+
 end
